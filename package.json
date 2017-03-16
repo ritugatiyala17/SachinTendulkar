@@ -1,0 +1,19 @@
+{
+  "name": "sachin_tendulkar",
+  "version": "1.0.0",
+  "description": "Analysis of his Cricketing Career",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ritu-gatiyala/SachinTendulkar.git"
+  },
+  "author": "Ritu Gatiyala",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ritu-gatiyala/SachinTendulkar/issues"
+  },
+  "homepage": "https://github.com/ritu-gatiyala/SachinTendulkar#readme"
+}
