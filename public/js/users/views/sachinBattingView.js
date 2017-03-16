@@ -2,21 +2,45 @@ define([
 	'jquery',
 	'underscore',
 	'backbone',
-	'highcharts'
-	],function($,_,Backbone,highcharts){
+	'highcharts',
+	'users/collections/odiPlayerComparisonCollection'
+	],function($,_,Backbone,highcharts,odiPlayerComparisonCollection){
 		var sachinBattingView= Backbone.View.extend({
 			el: '#con',
-			render: function(a){
-				this.result= a.map(function(x){return [((new Date(x['date'])).getFullYear()), parseInt(x['batting_score'])]});
-				console.log(this.result);
+			initialize: function(){
+				var self= this;
+				this.OdiPlayerComparisonCollection= new odiPlayerComparisonCollection();
+				this.OdiPlayerComparisonCollection.fetch({
+					success: function(){
+						self.collection= self.OdiPlayerComparisonCollection.toJSON();
+						self.render();
+					}
+				})
+			},
+			render: function(){
+				var that=this;
 				this.$el.highcharts({
-					plotOptions: {
-					    series: {
-					        pointStart: 1985
-					    }
+					chart:{
+						type: 'column'
+					},
+					title: {
+						text: 'Comparison between some of the best batsmen in ODI'
+					},
+					xAxis: {
+						categories: that.collection.map(function(x){return [x['player_name']]})
 					},
           series: [{
-              data: this.result
+          	name: 'Average',
+            data: that.collection.map(function(x){return [x['average']]})
+          },{
+          	name: 'Strike rate',
+          	data: that.collection.map(function(x){return [x['strike_rate']]})
+          },{
+          	name: 'Wickets',
+          	data: that.collection.map(function(x){return [x['wickets']]})
+          },{
+          	name: 'Highest Score',
+          	data: that.collection.map(function(x){return [x['highest_score']]})
           }]
 				});
 			}

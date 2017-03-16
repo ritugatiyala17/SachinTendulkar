@@ -13,14 +13,14 @@ define([
     });
 
     var initialize = function() {
-        $("#view").html(navbar);
+        $("h1").html();
         app_router = new AppRouter();
         
         app_router.on('route:test',function(){
               console.log('Yo, we are inside the test :D');
 
           require([
-            'users/views/sachinOdiRunsView'
+            'users/views/sachinMainView'
             ],function(Test){
               var test= new Test({el:'#main-view'});
             });
