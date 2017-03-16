@@ -1,0 +1,52 @@
+[
+	{
+		"player_name":"Sachin Tendulkar",
+		"runs": 18426,
+		"highest_score": 200,
+		"average": 44.83,
+		"strike_rate": 86.23,
+		"centuries": 49,
+		"fifties": 96,
+		"wickets": 154
+	},
+	{
+		"player_name":"KC Sangakkara",
+		"runs": 14234,
+		"highest_score": 169,
+		"average": 41.98,
+		"strike_rate": 78.86,
+		"centuries": 25,
+		"fifties": 93,
+		"wickets": 0
+	},
+	{
+		"player_name":"RT Ponting",
+		"runs": 13704,
+		"highest_score": 164,
+		"average": 42.03,
+		"strike_rate": 80.39,
+		"centuries": 30,
+		"fifties": 82,
+		"wickets": 3
+	},
+	{
+		"player_name":"IVA Richards",
+		"runs": 6721,
+		"highest_score": 189,
+		"average": 47,
+		"strike_rate": 90.20,
+		"centuries": 11,
+		"fifties": 45,
+		"wickets": 118
+	},
+	{
+		"player_name":"BC Lara",
+		"runs": 10405,
+		"highest_score": 169,
+		"average": 40.48,
+		"strike_rate": 79.51,
+		"centuries": 19,
+		"fifties": 63,
+		"wickets": 4
+	}
+]

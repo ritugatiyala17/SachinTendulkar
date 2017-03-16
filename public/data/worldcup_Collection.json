@@ -1,0 +1,33 @@
+[
+	{
+		"player_name":"Sachin Tendulkar",
+		"runs": 2278,
+		"average": 56.95,
+		"strike_rate": 88.98
+	},
+	{
+		"player_name":"RT Ponting",
+		"runs": 1743,
+		"average": 45.86,
+		"strike_rate": 79.95
+	},
+	{
+		"player_name":"BC Lara",
+		"runs": 1225,
+		"average": 42.24,
+		"strike_rate": 86.26
+	},
+	{
+		"player_name":"ST Jayasuriya",
+		"runs": 1165,
+		"average": 34.26,
+		"strike_rate": 90.66
+	},
+	{
+		"player_name":"IVA Richards",
+		"runs": 1013,
+		"average": 63.31,
+		"strike_rate": 85.05
+	}
+	
+]

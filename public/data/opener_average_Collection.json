@@ -1,0 +1,34 @@
+[
+	{
+		"player_name": "Sachin Tendulkar",
+		"runs": 15310,
+		"average": 48.29,
+		"strike_rate": 88.05,
+		"centuries": 45,
+		"fifties": 75
+	},
+	{
+		"player_name": "Sanath Jayasuriya",
+		"runs": 12740,
+		"average": 34.61,
+		"strike_rate": 92.48,
+		"centuries": 28,
+		"fifties": 66
+	},
+	{
+		"player_name": "Adam Gilchrist",
+		"runs": 9200,
+		"average": 36.50,
+		"strike_rate": 98.02,
+		"centuries": 16,
+		"fifties": 53
+	},
+	{
+		"player_name": "Sourav Ganguly",
+		"runs": 9146,
+		"average": 41.57,
+		"strike_rate": 73.59,
+		"centuries": 19,
+		"fifties": 58
+	}
+]
