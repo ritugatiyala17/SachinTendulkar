@@ -7,4 +7,5 @@ app.use(bp.json());
 app.use(bp.urlencoded({extended:true}));
 app.use(express.static(__dirname+'/public'));
 
-app.listen(3000,'127.0.0.1');	
+app.listen(3000,'127.0.0.1');
+console.log("Server is running on https://localhost:3000/")	

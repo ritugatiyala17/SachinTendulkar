@@ -15,6 +15,11 @@ Getting Started:
         1)npm install
         This will install all the dependencies.
 
+    Run the server:
+    	1)Go to the cloned folder and write:
+    		node server    
+    	2)server is running on 'https://localhost:3000'
+    	 	
 Author:
     Ritu Gatiyala
 
