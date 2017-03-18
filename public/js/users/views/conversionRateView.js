@@ -23,7 +23,7 @@ define([
 						type: 'column'
 					},
 					title: {
-						text: 'Conversion Rate of Fifties to Hundreds'
+						text: 'Ratio of Fifties to Hundreds'
 					},
 					xAxis: {
 						categories: self.OpenerComparisonCollection.toJSON().map(function(x){return [x['player_name']]})
