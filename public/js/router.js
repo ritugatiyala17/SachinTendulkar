@@ -1,31 +1,64 @@
 define([
     'jquery',
     'underscore',
-    'backbone'
-], function($, _, Backbone,navbar,input) {
+    'backbone',
+    'text!users/templates/homeTemplate.html'
+], function($, _, Backbone,homeTemplate) {
     var AppRouter = Backbone.Router.extend({
         routes: {
-            'home': 'showHome',
-            'users':'showUser',
-            'test':'test',
+            '/': 'showHome',
+            'worldcup':'worldcupPerformance',
+            'opener':'opener',
+            'win':'winPercentage',
+            'odi':'odiPerformance',
             '*actions': 'showHome'
         }
     });
 
     var initialize = function() {
-        $("h1").html();
-        app_router = new AppRouter();
+        $("#view").html(homeTemplate);
+        var appRouter = new AppRouter();
         
-        app_router.on('route:test',function(){
-              console.log('Yo, we are inside the test :D');
+        appRouter.on('route:showHome',function(){
+          require([
+            'users/views/mainView'
+            ],function(mainView){
+              var MainView= new mainView({el:'#main-view'});
+            });
+        });
 
+        appRouter.on('route:odiPerformance',function(){
           require([
             'users/views/sachinMainView'
-            ],function(Test){
-              var test= new Test({el:'#main-view'});
+            ],function(sachinMainView){
+              var SachinMainView= new sachinMainView({el:'#main-view'});
             });
-
         });
+
+        appRouter.on('route:worldcupPerformance',function(){
+          require([
+            'users/views/worldcupView'
+            ],function(worldcupView){
+              var WorldcupView= new worldcupView({el:'#main-view'});
+            });
+        });
+
+        appRouter.on('route:opener',function(){
+          require([
+            'users/views/battingPositionView'
+            ],function(battingPositionView){
+              var BattingPositionView= new battingPositionView({el:'#main-view'});
+            });
+        });
+
+        appRouter.on('route:winPercentage',function(){
+          require([
+            'users/views/centuriesToWinView'
+            ],function(centuriesToWinView){
+              var CenturiesToWinView= new centuriesToWinView({el:'#main-view'});
+            });
+        });
+
         Backbone.history.start();
     };
     return {

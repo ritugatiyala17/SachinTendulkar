@@ -2,20 +2,24 @@ define([
    'jquery',
    'underscore',
    'backbone',
-   'users/views/sachinBattingView'
-],function($,_,Backbone,sachinBattingView){
-    var UserView=Backbone.View.extend({
+   'users/views/odiPlayerComparisonView',
+   'text!users/templates/odiStatsTemplate.html',
+  'users/views/sachinVsRichardsView'
+],function($,_,Backbone,odiPlayerComparisonView,odiStatsTemplate,sachinVsRichardsView){
+    var sachinMainView=Backbone.View.extend({
+        Temp: _.template(odiStatsTemplate),
         initialize:function(){
             var self=this;
-             
-            (new sachinBattingView).initialize();
-            self.render();
-             
+            this.OdiPlayerComparisonView= new odiPlayerComparisonView({});
+            this.SachinVsRichardsView= new sachinVsRichardsView({});
+            this.render();
           },
-           render:function(){
-               console.log('We are inside the render function :D');
-               // this.$el.html(this.Temp({collection:this.usercoll.toJSON()}));
-             }
+        render: function(){
+          this.$el.html(this.Temp());
+          this.OdiPlayerComparisonView.setElement(this.$('#graph1')).render();
+          this.SachinVsRichardsView.setElement(this.$('#graph2')).render();
+          return this;
+        }  
      });
-    return UserView;
+    return sachinMainView;
 });

@@ -6,7 +6,7 @@ define([
 	'users/collections/odiPlayerComparisonCollection'
 	],function($,_,Backbone,highcharts,odiPlayerComparisonCollection){
 		var odiPlayerComparisonView= Backbone.View.extend({
-			el: '#graph1',
+			el: '#graph2',
 			initialize: function(){
 				var self= this;
 				this.OdiPlayerComparisonCollection= new odiPlayerComparisonCollection();
@@ -23,25 +23,16 @@ define([
 						type: 'column'
 					},
 					title: {
-						text: 'Who is better?'
+						text: 'Highest run scorers'
 					},
 					xAxis: {
 						categories: self.OdiPlayerComparisonCollection.toJSON().map(function(x){return [x['player_name']]})
 					},
-          series: [{
-          	name: 'Average',
-            data: self.OdiPlayerComparisonCollection.toJSON().map(function(x){return [x['average']]})
-          },{
-          	name: 'Strike rate',
-          	data: self.OdiPlayerComparisonCollection.toJSON().map(function(x){return [x['strike_rate']]})
-          },{
-          	name: 'Wickets',
-          	data: self.OdiPlayerComparisonCollection.toJSON().map(function(x){return [x['wickets']]})
-          },{
-          	name: 'Highest Score',
-          	data: self.OdiPlayerComparisonCollection.toJSON().map(function(x){return [x['highest_score']]})
-          }]
-				});
+	        series: [{
+	        	name: 'Runs Scored',
+	          data: self.OdiPlayerComparisonCollection.toJSON().map(function(x){return [x['runs']]})
+	        }]
+			});
 			}
 		});
 		return odiPlayerComparisonView;

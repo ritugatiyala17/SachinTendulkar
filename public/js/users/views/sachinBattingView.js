@@ -12,13 +12,12 @@ define([
 				this.OdiPlayerComparisonCollection= new odiPlayerComparisonCollection();
 				this.OdiPlayerComparisonCollection.fetch({
 					success: function(){
-						self.collection= self.OdiPlayerComparisonCollection.toJSON();
 						self.render();
 					}
 				})
 			},
 			render: function(){
-				var that=this;
+				var self=this;
 				this.$el.highcharts({
 					chart:{
 						type: 'column'
@@ -27,20 +26,20 @@ define([
 						text: 'Comparison between some of the best batsmen in ODI'
 					},
 					xAxis: {
-						categories: that.collection.map(function(x){return [x['player_name']]})
+						categories: self.OdiPlayerComparisonCollection.toJSON().map(function(x){return [x['player_name']]})
 					},
           series: [{
           	name: 'Average',
-            data: that.collection.map(function(x){return [x['average']]})
+            data: self.OdiPlayerComparisonCollection.toJSON().map(function(x){return [x['average']]})
           },{
           	name: 'Strike rate',
-          	data: that.collection.map(function(x){return [x['strike_rate']]})
+          	data: self.OdiPlayerComparisonCollection.toJSON().map(function(x){return [x['strike_rate']]})
           },{
           	name: 'Wickets',
-          	data: that.collection.map(function(x){return [x['wickets']]})
+          	data: self.OdiPlayerComparisonCollection.toJSON().map(function(x){return [x['wickets']]})
           },{
           	name: 'Highest Score',
-          	data: that.collection.map(function(x){return [x['highest_score']]})
+          	data: self.OdiPlayerComparisonCollection.toJSON().map(function(x){return [x['highest_score']]})
           }]
 				});
 			}

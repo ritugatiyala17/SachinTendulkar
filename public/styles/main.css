@@ -1,9 +1,87 @@
 p{
 color:red;
 }
-#mainContent{
-margin-top:51px;
-}
 body{
 color:green;
+}
+#mainView{
+	background-image: url(../assets/images/7.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: fixed;
+	height:100vh;
+}
+#odiPlayerComparison{
+	background-image: url(../assets/images/5.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: fixed;
+	height:100%;
+}
+#worldcupComparison{
+	background-image: url(../assets/images/10.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: fixed;
+	height:100vh;
+}
+#openerComparison{
+	background-image: url(../assets/images/opener-5.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: fixed;
+	height:100%;
+}
+#centuriesToWin{
+	background-image: url(../assets/images/century-6.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: fixed;
+	height:100vh;
+}
+#graph1,#graph2,#graph4,#graph5,#graph6,#graph7{
+	height:300px;
+}
+#graph3{
+	height:330px;
+}
+.navbar{
+	background-color: dodgerblue;
+	margin-bottom: 0px;
+}
+a{
+	font-size: 14px;
+	color: white;
+}
+article{
+	color: #336187;
+	padding: 20px;
+}
+.description{
+	margin-top: 20px;
+	height:none;
+	font-size: 24px;
+	text-align: center;
+	background:rgba(255,255,255,0.5);
+}
+.stats{
+	text-align: center;
+}
+.quote{
+	margin: 10px;
+	font-size: 24px;
+	text-align: center;
+	color: white;
+	width:100vw;
+	background:rgba(255,255,255,0.5);
+}
+#introduction{
+	margin-top:0;
+	width: 100vw;
+	border: solid 2px white;
+	position:absolute;
+	top:50vh;
+}
+#homeRoute{
+	background-color:#336187;
 }
