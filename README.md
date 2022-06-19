@@ -4,6 +4,10 @@ Project Title:
 
     Sachin Tendulkar
 
+Description:
+
+    Created this initially in Jan 2017. Adding to this github account.
+
 Getting Started:
     1)Start by cloning the git repository:
     git clone https://github.com/ritu-gatiyala/SachinTendulkar.git
